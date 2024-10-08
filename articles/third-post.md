@@ -1,10 +1,10 @@
 ---
-title: "Mein erster Blogpost"
-date: "08-10-2024"
-category: "business"
+title: "die Girls"
+date: "01-09-2015"
+category: "lifestyle"
 ---
 
-# Hallo Welt!
+# fmf das Trio <3!
 
 Dies ist mein erster Blogartikel. Ich freue mich, diesen in meinem Blog zu teilen.
 

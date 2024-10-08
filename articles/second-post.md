@@ -1,10 +1,10 @@
 ---
-title: "Mein erster Blogpost"
-date: "08-10-2024"
+title: "heli - focaccia & drinks"
+date: "01-07-2023"
 category: "business"
 ---
 
-# Hallo Welt!
+# heli!
 
 Dies ist mein erster Blogartikel. Ich freue mich, diesen in meinem Blog zu teilen.
 

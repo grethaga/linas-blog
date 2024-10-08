@@ -29,3 +29,7 @@
 .article > blockquote {
   @apply pl-5 italic border-l-2 border-stone-600 border-opacity-40;
 }
+
+.article > p > img {
+  @apply w-1/2 mx-auto;
+}

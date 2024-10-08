@@ -16,3 +16,5 @@ Hier ist ein weiterer Abschnitt meines Artikels.
 - Punkt 2
 
 **Fettgedruckter Text** und _kursiver Text_.
+
+![Art](/focac.jpeg)

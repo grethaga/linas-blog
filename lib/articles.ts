@@ -2,21 +2,24 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import moment from "moment";
+import "moment/locale/de";
 import { remark } from "remark";
 import html from "remark-html";
 
 import { ArticleItem } from "../types";
 import { title } from "process";
 
-const articleDirectory = path.join(process.cwd(), "articles");
+moment.locale("de");
+
+const articlesDirectory = path.join(process.cwd(), "articles");
 
 const getSortedArticles = (): ArticleItem[] => {
-  const fileNames = fs.readdirSync(articleDirectory);
+  const fileNames = fs.readdirSync(articlesDirectory);
 
   const allArticlesData = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, "");
 
-    const fullPath = path.join(articleDirectory, fileName);
+    const fullPath = path.join(articlesDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf-8");
 
     const matterResult = matter(fileContents);
@@ -58,20 +61,22 @@ export const getCategorisedArticles = (): Record<string, ArticleItem[]> => {
 };
 
 export const getArticleData = async (id: string) => {
-  const fullPath = path.join(articleDirectory, `${id}.md`);
+  const fullPath = path.join(articlesDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf-8");
 
   const matterResult = matter(fileContents);
 
-  const htmlContent = await remark().use(html).process(matterResult.content);
+  const processedContent = await remark()
+    .use(html)
+    .process(matterResult.content);
 
-  const content = htmlContent.toString();
+  const contentHtml = processedContent.toString();
 
   return {
     id,
+    contentHtml,
     title: matterResult.data.title,
-    date: moment(matterResult.data.date, "DD-MM-YYYY").format("MMMM Do YYYY"),
+    date: moment(matterResult.data.date, "DD-MM-YYYY").format("Do MMMM YYYY"),
     category: matterResult.data.category,
-    content,
   };
 };

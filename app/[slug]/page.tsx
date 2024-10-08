@@ -13,7 +13,10 @@ const Article = async ({ params }: { params: { slug: string } }) => {
         </Link>
         <p>{articleData.date.toString()}</p>
       </div>
-      <article dangerouslySetInnerHTML={{ __html: articleData.contentHtml }} />
+      <article
+        className="article"
+        dangerouslySetInnerHTML={{ __html: articleData.contentHtml }}
+      />
     </section>
   );
 };

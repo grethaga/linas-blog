@@ -6,10 +6,10 @@ import DropdownMenu from "./DropDownMenu";
 import { useState } from "react";
 
 export default function Navbar() {
-  const [isActive, setIsActive] = useState(false);
+  const [isMenuOpen, setisMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsActive(!isActive);
+    setisMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -59,7 +59,16 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      {isActive && <DropdownMenu />}
+      <div
+        className={`absolute w-full h-full bg-neutral-100 sm:hidden transform transition-transform ${
+          isMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+        style={{ transition: "transform 0.3s ease-in-out, opacity 0.3s ease" }}
+      >
+        <DropdownMenu />
+      </div>
     </nav>
   );
 }

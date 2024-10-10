@@ -30,19 +30,25 @@ export default function Navbar() {
             <div className="flex space-x-4">
               <Link
                 href="/"
-                className="text-gray-400 hover:text-gray-900 font-poppins px-3 py-2 text-sm"
+                className="text-gray-400 hover:text-gray-900 font-poppins px-3 py-2 "
               >
                 Home
               </Link>
               <Link
+                href="/"
+                className="text-gray-400 hover:text-gray-900 font-poppins px-3 py-2"
+              >
+                Articles
+              </Link>
+              <Link
                 href="/about"
-                className="text-gray-400 hover:text-gray-900 font-poppins px-3 py-2 text-sm"
+                className="text-gray-400 hover:text-gray-900 font-poppins px-3 py-2"
               >
                 About
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-400 hover:text-gray-900 font-poppins px-3 py-2 text-sm"
+                className="text-gray-400 hover:text-gray-900 font-poppins px-3 py-2"
               >
                 Contact
               </Link>

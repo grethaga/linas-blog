@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-regular-svg-icons";
+import { faStar, faXmark } from "@fortawesome/free-solid-svg-icons";
 import DropdownMenu from "./DropDownMenu";
 import { useState } from "react";
 
@@ -52,8 +52,12 @@ export default function Navbar() {
           <div className="flex sm:hidden">
             <button className="cursor-pointer" onClick={toggleMenu}>
               <FontAwesomeIcon
-                icon={faStar}
-                className="text-yellow-400 text-3xl"
+                icon={isMenuOpen ? faXmark : faStar}
+                size="2x"
+                style={{
+                  color: isMenuOpen ? "#1F2937" : "#facc15",
+                  transition: "transform 0.3s ease, color 0.2s ease",
+                }}
               />
             </button>
           </div>

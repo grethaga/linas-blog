@@ -1,8 +1,17 @@
+"use client";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
+import DropdownMenu from "./DropDownMenu";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <nav>
       <div className="max-w-7xl mx-auto px-6 pt-10 md:px-8">
@@ -41,10 +50,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex sm:hidden">
-            <button className="">
-              <span className="sr-only">Open main menu</span>
-              {/* Icon für mobile Ansicht (z.B. ein Hamburger Icon) */}
-              {/* Du kannst hier ein FontAwesome Icon oder ein SVG verwenden */}
+            <button className="cursor-pointer" onClick={toggleMenu}>
               <FontAwesomeIcon
                 icon={faStar}
                 className="text-yellow-400 text-3xl"
@@ -53,6 +59,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      {isActive && <DropdownMenu />}
     </nav>
   );
 }

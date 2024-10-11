@@ -30,7 +30,7 @@ export default function Navbar() {
             <div className="flex space-x-4">
               <Link
                 href="/"
-                className="text-gray-400 hover:text-gray-900 font-poppins px-3 py-2 "
+                className={`text-gray-400 hover:text-gray-900 font-poppins px-3 py-2`}
               >
                 Home
               </Link>

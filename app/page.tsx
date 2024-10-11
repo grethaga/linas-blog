@@ -5,6 +5,8 @@ import Socials from "@/components/Socials";
 import { getCategorisedArticles } from "@/lib/articles";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { useRouter } from "next/router";
+
 config.autoAddCss = false;
 
 export default function Home() {

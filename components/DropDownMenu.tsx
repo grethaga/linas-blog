@@ -8,7 +8,7 @@ function DropdownMenu() {
         <Link href="/" className="text-gray-400 hover:text-gray-900">
           Home
         </Link>
-        <Link href="/about" className="text-gray-400 hover:text-gray-900">
+        <Link href="/articles" className="text-gray-400 hover:text-gray-900">
           Articles
         </Link>
         <Link href="/about" className="text-gray-400 hover:text-gray-900">

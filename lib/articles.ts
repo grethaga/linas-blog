@@ -14,7 +14,9 @@ moment.locale("de");
 const articlesDirectory = path.join(process.cwd(), "articles");
 
 const getSortedArticles = (): ArticleItem[] => {
-  const fileNames = fs.readdirSync(articlesDirectory);
+  const fileNames = fs
+    .readdirSync(articlesDirectory)
+    .filter((file) => file.endsWith(".md"));
 
   const allArticlesData = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, "");

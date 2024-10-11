@@ -1,6 +1,8 @@
 import ArticleListItem from "@/components/ArticleListItem";
 import DropdownMenu from "@/components/DropDownMenu";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Socials from "@/components/Socials";
 import { getCategorisedArticles } from "@/lib/articles";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -26,6 +28,8 @@ export default function Home() {
             ))}
         </section>
       </section>
+      <Socials />
+      <Footer />
     </div>
   );
 }

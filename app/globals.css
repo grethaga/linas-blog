@@ -33,3 +33,7 @@
 .article > p > img {
   @apply w-1/2 mx-auto;
 }
+
+.icon-small {
+  font-size: 1.3rem;
+}

@@ -5,15 +5,17 @@ import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 const Article = async ({ params }: { params: { slug: string } }) => {
   const articleData = await getArticleData(params.slug);
   return (
-    <section className="mx-auto w-10/12 md:w-1/2 mt-20 flex flex-col gap-5">
-      <div className="flex justify-between font-poppins">
-        <Link
-          href="/"
-          className="flex flex-row gap-1 place-items-center bg-customColor text-white p-2 rounded-2xl"
-        >
+    <section className="mx-auto w-10/12 md:w-[60%] mt-14 flex flex-col gap-5">
+      <div className="flex justify-end">
+        <p className="font-cormorantGaramond font-bold bg-customColor text-white py-1 px-2 rounded-lg text-sm w-fit">
+          {articleData.category}
+        </p>
+      </div>
+      <div className="flex justify-between font-poppins mb-10">
+        <Link href="/" className="flex flex-row gap-1 place-items-center ">
           <ArrowLeftIcon width={20} />
-          <p className="text-sm">zurück</p>
         </Link>
+
         <p>{articleData.date.toString()}</p>
       </div>
       <article

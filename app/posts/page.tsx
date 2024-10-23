@@ -2,23 +2,17 @@ import ArticleListItem from "@/components/ArticleListItem";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Socials from "@/components/Socials";
+import React from "react";
 import { getCategorisedArticles } from "@/lib/articles";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { useRouter } from "next/router";
 
-config.autoAddCss = false;
-
-export default function Home() {
+const Posts = () => {
   const articles = getCategorisedArticles();
+
   return (
-    <div className="Blog">
+    <div className="Posts">
       <Navbar />
-      <section className="mx-auto w-10/12 md:w-[60%] mt-20 flex flex-col gap-16 mb-20 px-2">
-        <header className="font-cormorantGaramond font-light text-6xl text-neutral-900 text-center">
-          <h1>Lina's Blog</h1>
-        </header>
-        <section className="md:grid md:grid-cols-2 flex flex-col gap-10">
+      <section className="mx-auto w-10/12 md:w-[60%]">
+        <section className="sm:grid sm:grid-cols-2 flex flex-col gap-6 my-20">
           {articles !== null &&
             Object.keys(articles).map((article) => (
               <ArticleListItem
@@ -33,4 +27,6 @@ export default function Home() {
       <Footer />
     </div>
   );
-}
+};
+
+export default Posts;

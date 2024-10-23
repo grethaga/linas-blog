@@ -34,19 +34,19 @@ export default function Navbar() {
                 href="/"
                 className={`${
                   pathname === "/"
-                    ? "text-customColor font-bold hover:text-orange-600"
-                    : "text-gray-400"
-                } hover:text-gray-900 font-poppins px-3 py-2`}
+                    ? "text-customColor font-bold"
+                    : "text-gray-400 hover:text-gray-900"
+                } font-poppins px-3 py-2`}
               >
                 Home
               </Link>
               <Link
-                href="/articles"
+                href="/posts"
                 className={`${
-                  pathname === "/articles"
-                    ? "text-customColor font-bold hover:text-orange-600"
-                    : "text-gray-400"
-                } hover:text-gray-900 font-poppins px-3 py-2`}
+                  pathname === "/posts"
+                    ? "text-customColor font-bold"
+                    : "text-gray-400 hover:text-gray-900"
+                } font-poppins px-3 py-2`}
               >
                 Articles
               </Link>
@@ -54,9 +54,9 @@ export default function Navbar() {
                 href="/about"
                 className={`${
                   pathname === "/about"
-                    ? "text-customColor font-bold hover:text-orange-600"
-                    : "text-gray-400"
-                } hover:text-gray-900 font-poppins px-3 py-2`}
+                    ? "text-customColor font-bold"
+                    : "text-gray-400 hover:text-gray-900"
+                } font-poppins px-3 py-2`}
               >
                 About
               </Link>
@@ -64,9 +64,9 @@ export default function Navbar() {
                 href="/contact"
                 className={`${
                   pathname === "/contact"
-                    ? "text-customColor font-bold hover:text-orange-600"
-                    : "text-gray-400"
-                } hover:text-gray-900 font-poppins px-3 py-2`}
+                    ? "text-customColor font-bold"
+                    : "text-gray-400 hover:text-gray-900"
+                } font-poppins px-3 py-2`}
               >
                 Contact
               </Link>

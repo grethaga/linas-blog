@@ -12,6 +12,9 @@ const config: Config = {
         cormorantGaramond: ["var(--font-cormorant-garamond)", "serif"],
         poppins: ["var(--font-poppins)", "sans-serif"],
       },
+      colors: {
+        customColor: "#FF9966",
+      },
     },
   },
   plugins: [],

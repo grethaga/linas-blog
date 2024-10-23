@@ -15,7 +15,7 @@ export default function ArticleListItem({ category, articles }: Props) {
           <Link
             key={id}
             href={`/${article.id}`}
-            className="text-neutral-900 hover:text-amber-700 transition duration-150"
+            className="text-neutral-900 hover:text-orange-600 transition duration-150"
           >
             {article.title}
           </Link>

@@ -6,7 +6,7 @@ const Footer = () => {
       This project was coded by{" "}
       <a
         href="https://github.com/grethaga"
-        className="text-blue-300 hover:text-blue-700"
+        className="text-customColor hover:text-orange-600"
       >
         Gretha Gall
       </a>

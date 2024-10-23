@@ -1,11 +1,13 @@
 "use client";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faXmark } from "@fortawesome/free-solid-svg-icons";
-import DropdownMenu from "./DropDownMenu";
+import { faBars, faStar, faXmark } from "@fortawesome/free-solid-svg-icons";
+import DropdownMenu from "./DropdownMenu";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isMenuOpen, setisMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -30,25 +32,41 @@ export default function Navbar() {
             <div className="flex space-x-4">
               <Link
                 href="/"
-                className={`text-gray-400 hover:text-gray-900 font-poppins px-3 py-2`}
+                className={`${
+                  pathname === "/"
+                    ? "text-customColor font-bold hover:text-orange-600"
+                    : "text-gray-400"
+                } hover:text-gray-900 font-poppins px-3 py-2`}
               >
                 Home
               </Link>
               <Link
-                href="/"
-                className="text-gray-400 hover:text-gray-900 font-poppins px-3 py-2"
+                href="/articles"
+                className={`${
+                  pathname === "/articles"
+                    ? "text-customColor font-bold hover:text-orange-600"
+                    : "text-gray-400"
+                } hover:text-gray-900 font-poppins px-3 py-2`}
               >
                 Articles
               </Link>
               <Link
                 href="/about"
-                className="text-gray-400 hover:text-gray-900 font-poppins px-3 py-2"
+                className={`${
+                  pathname === "/about"
+                    ? "text-customColor font-bold hover:text-orange-600"
+                    : "text-gray-400"
+                } hover:text-gray-900 font-poppins px-3 py-2`}
               >
                 About
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-400 hover:text-gray-900 font-poppins px-3 py-2"
+                className={`${
+                  pathname === "/contact"
+                    ? "text-customColor font-bold hover:text-orange-600"
+                    : "text-gray-400"
+                } hover:text-gray-900 font-poppins px-3 py-2`}
               >
                 Contact
               </Link>
@@ -58,10 +76,10 @@ export default function Navbar() {
           <div className="flex sm:hidden">
             <button className="cursor-pointer" onClick={toggleMenu}>
               <FontAwesomeIcon
-                icon={isMenuOpen ? faXmark : faStar}
+                icon={isMenuOpen ? faXmark : faBars}
                 size="2x"
                 style={{
-                  color: isMenuOpen ? "#1F2937" : "#facc15",
+                  color: isMenuOpen ? "#1F2937" : "#FF9966",
                   transition: "transform 0.3s ease, color 0.2s ease",
                 }}
               />

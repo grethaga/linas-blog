@@ -17,6 +17,7 @@ const Posts = () => {
           {articles !== null &&
             Object.keys(articles).map((category) => (
               <Link
+                key={category}
                 href="/"
                 className="font-cormorantGaramond text-4xl hover:text-orange-600"
               >

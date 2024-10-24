@@ -41,6 +41,7 @@
 .icon-3d {
   transition: transform 1s ease;
   transform-style: preserve-3d;
+  z-index: 1;
 }
 
 .icon-3d:hover {

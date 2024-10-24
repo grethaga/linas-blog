@@ -20,6 +20,7 @@ export default function Home() {
         </header>
         <section>
           <h2>What's new</h2>
+          neueste posts mit stunden oder tages anzeige
         </section>
         {/*<section className="md:grid md:grid-cols-2 flex flex-col gap-10">
           {articles !== null &&

@@ -93,7 +93,7 @@ export default function Navbar({ showSubscribeButton = true }) {
         </div>
       </div>
       <div
-        className={`absolute w-full h-full bg-neutral-100 sm:hidden transform transition-transform ${
+        className={`absolute w-full h-full bg-neutral-100 sm:hidden transform transition-transform z-10 ${
           isMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"

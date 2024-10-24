@@ -6,7 +6,7 @@ import DropdownMenu from "./DropdownMenu";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
-export default function Navbar() {
+export default function Navbar({ showSubscribeButton = true }) {
   const pathname = usePathname();
   const [isMenuOpen, setisMenuOpen] = useState(false);
 
@@ -74,12 +74,17 @@ export default function Navbar() {
           </div>
 
           <div className="flex sm:hidden">
+            {showSubscribeButton && (
+              <button className="bg-customColor w-fit px-2 rounded-xl font-poppins text-white text-sm mr-5 hover:bg-orange-500">
+                <Link href={"/subscribe"}>subscribe</Link>
+              </button>
+            )}
             <button className="cursor-pointer" onClick={toggleMenu}>
               <FontAwesomeIcon
                 icon={isMenuOpen ? faXmark : faBars}
                 size="2x"
                 style={{
-                  color: isMenuOpen ? "#1F2937" : "#FF9966",
+                  fontSize: "1.8rem",
                   transition: "transform 0.3s ease, color 0.2s ease",
                 }}
               />

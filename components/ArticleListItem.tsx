@@ -14,7 +14,7 @@ export default function ArticleListItem({ category, articles }: Props) {
         {articles.map((article, id) => (
           <Link
             key={id}
-            href={`/${article.id}`}
+            href={`/${article.id}/article`}
             className="text-neutral-900 hover:text-orange-600 transition duration-150"
           >
             {article.title}

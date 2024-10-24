@@ -15,6 +15,7 @@ const config: Config = {
       colors: {
         customColor: "#FF9966",
       },
+      transform: ["hover"],
     },
   },
   plugins: [],

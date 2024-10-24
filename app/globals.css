@@ -37,3 +37,12 @@
 .icon-small {
   font-size: 1.3rem;
 }
+
+.icon-3d {
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+}
+
+.icon-3d:hover {
+  transform: translate3d(0px, 0px, 20px) rotateY(360deg);
+}

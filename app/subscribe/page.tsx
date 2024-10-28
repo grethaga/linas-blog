@@ -8,7 +8,9 @@ const subscribe = () => {
     <div className="Subscribe">
       <Navbar showSubscribeButton={false} />
       <section className="mx-auto text-center my-20 flex flex-col gap-7 px-2">
-        <h1 className="font-cormorantGaramond text-5xl">Don't miss anything</h1>
+        <h1 className="font-cormorantGaramond text-4xl sm:text-5xl">
+          Don't miss anything
+        </h1>
         <input
           type="email"
           placeholder="Your email.."

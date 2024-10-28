@@ -13,7 +13,7 @@ moment.locale("de");
 
 const articlesDirectory = path.join(process.cwd(), "articles");
 
-const getSortedArticles = (): ArticleItem[] => {
+export const getSortedArticles = (): ArticleItem[] => {
   const fileNames = fs
     .readdirSync(articlesDirectory)
     .filter((file) => file.endsWith(".md"));
@@ -38,12 +38,15 @@ const getSortedArticles = (): ArticleItem[] => {
     const format = "DD-MM-YYYY";
     const dateOne = moment(a.date, format);
     const dateTwo = moment(b.date, format);
-    if (dateOne.isBefore(dateTwo)) {
-      return -1;
-    } else if (dateTwo.isAfter(dateOne)) {
+    return dateTwo.diff(dateOne);
+    {
+      /*if (dateOne.isBefore(dateTwo)) {
       return 1;
+    } else if (dateTwo.isAfter(dateOne)) {
+      return -1;
     } else {
       return 0;
+    }*/
     }
   });
 };

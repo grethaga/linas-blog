@@ -1,6 +1,6 @@
 ---
-title: "Mein erster Blogpost"
-date: "23-10-2024"
+title: "Mein erster Blogpost 2"
+date: "28-10-2024"
 category: "health"
 ---
 

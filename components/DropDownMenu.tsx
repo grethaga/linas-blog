@@ -2,7 +2,7 @@ import Link from "next/link";
 import Socials from "./Socials";
 import { usePathname } from "next/navigation";
 
-export default function DropdownMenu() {
+export default function DropDownMenu() {
   const pathname = usePathname();
 
   return (

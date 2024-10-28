@@ -14,7 +14,7 @@ const subscribe = () => {
         <input
           type="email"
           placeholder="Your email.."
-          className="w-1/2 mx-auto p-1.5 rounded-lg font-poppins text-sm focus:outline-none"
+          className="w-1/2 lg:w-1/3 mx-auto p-1.5 rounded-lg font-poppins text-sm focus:outline-none"
         />
         <button className="bg-customColor w-fit px-2 py-1.5 mx-auto rounded-xl font-poppins text-white text-sm hover:bg-orange-500">
           subscribe

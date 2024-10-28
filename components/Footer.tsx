@@ -6,6 +6,7 @@ const Footer = () => {
       This project was coded by{" "}
       <a
         href="https://github.com/grethaga"
+        target="_blank"
         className="text-customColor hover:text-orange-600"
       >
         Gretha Gall

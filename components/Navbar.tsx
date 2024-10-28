@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faStar, faXmark } from "@fortawesome/free-solid-svg-icons";
-import DropdownMenu from "./DropdownMenu";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import DropdownMenu from "./DropdownMenu";
 
 export default function Navbar({ showSubscribeButton = true }) {
   const pathname = usePathname();

@@ -12,7 +12,7 @@ const Posts = () => {
   return (
     <div className="Posts">
       <Navbar />
-      <section className="mx-auto w-10/12 md:w-[60%]">
+      <section className="mx-auto w-10/12 md:w-1/2">
         <section className="sm:grid sm:grid-cols-2 flex flex-col gap-10 my-20">
           {articles !== null &&
             Object.keys(articles).map((category) => (

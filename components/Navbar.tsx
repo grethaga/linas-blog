@@ -29,7 +29,14 @@ export default function Navbar({ showSubscribeButton = true }) {
           </div>
 
           <div className="hidden sm:block sm:ml-6">
-            <div className="flex space-x-4">
+            <div className="flex space-x-2">
+              <div className="hidden sm:flex items-center">
+                {showSubscribeButton && (
+                  <button className="bg-customColor w-fit px-2 h-3/4 rounded-xl font-poppins text-white text-sm mr-5 hover:bg-orange-500">
+                    <Link href={"/subscribe"}>subscribe</Link>
+                  </button>
+                )}
+              </div>
               <Link
                 href="/"
                 className={`${

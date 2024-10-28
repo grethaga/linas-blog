@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import DropDownMenu from "./DropdownMenu";
+import NewMenu from "./NewMenu";
 
 export default function Navbar({ showSubscribeButton = true }) {
   const pathname = usePathname();
@@ -100,7 +100,7 @@ export default function Navbar({ showSubscribeButton = true }) {
         }`}
         style={{ transition: "transform 0.3s ease-in-out, opacity 0.3s ease" }}
       >
-        <DropDownMenu />
+        <NewMenu />
       </div>
     </nav>
   );

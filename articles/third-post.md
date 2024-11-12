@@ -4,7 +4,7 @@ date: "01-09-2015"
 category: "lifestyle"
 ---
 
-# fmf das Trio <3!
+# das Trio!
 
 Dies ist mein erster Blogartikel. Ich freue mich, diesen in meinem Blog zu teilen.
 

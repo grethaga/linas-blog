@@ -12,7 +12,14 @@ const About = () => {
           Hi I'm Lina
         </h1>
         <p className="font-poppins text-gray-800">
-          Haloo Haöo Hallo Hallo hallo hello hi Haloo Hallo
+          I have a background in business law and a passion for health, fitness,
+          and nutrition. Alongside my studies, I completed a trainer
+          certification, which deepened my knowledge of fitness and wellness.
+          Through my blog, I want to share tips and insights on how to live a
+          balanced, healthy lifestyle. Whether it's effective workout routines,
+          nutritional advice, or simple strategies for well-being, I’m here to
+          provide inspiration and support for anyone looking to lead a healthier
+          life.{" "}
         </p>
       </div>
       <Socials />
